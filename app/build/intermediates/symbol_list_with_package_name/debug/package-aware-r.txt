@@ -2619,12 +2619,15 @@ id bounceBoth
 id bounceEnd
 id bounceStart
 id buttonPanel
+id button_cancel
 id button_exit
 id button_fast_down
 id button_left
 id button_play
 id button_right
 id button_rotate
+id button_save
+id button_setting
 id cache_measures
 id callMeasure
 id cancel_button
@@ -2703,6 +2706,7 @@ id easeIn
 id easeInOut
 id easeOut
 id east
+id editTextName
 id edit_query
 id edittext_dropdown_editable
 id edittext_dropdown_noneditable
@@ -2998,6 +3002,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id userNameTextView
 id vertical_only
 id view_offset_helper
 id view_transition
@@ -3110,6 +3115,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
 layout activity_main_menu
+layout activity_name_input
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3203,6 +3209,7 @@ layout text_view_without_line_height
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
+string Setting
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -3240,6 +3247,7 @@ string character_counter_overflowed_content_description
 string character_counter_pattern
 string chip_text
 string clear_text_end_icon_content_description
+string enter_your_name
 string error_icon_content_description
 string exit
 string exposed_dropdown_menu_content_description
@@ -3320,14 +3328,15 @@ string mtrl_picker_toggle_to_day_selection
 string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
 string mtrl_timepicker_confirm
-string options
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string play
+string save
 string search_menu_title
+string setting
 string status_bar_notification_info_overflow
 string tetris
 style AlertDialog_AppCompat

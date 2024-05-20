@@ -8,6 +8,9 @@ import android.os.Bundle
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main_menu.*
+import kotlinx.android.synthetic.main.activity_name_input.button_cancel
+import kotlinx.android.synthetic.main.activity_name_input.button_save
+import kotlinx.android.synthetic.main.activity_name_input.editTextName
 import kotlinx.coroutines.*
 
 
@@ -18,6 +21,8 @@ class MainActivity : AppCompatActivity() {
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
         supportActionBar?.hide()
+
+        displayUserName()
 
         button_rotate.setOnClickListener {
             if (Rotate.isRotable()) {
@@ -45,6 +50,12 @@ class MainActivity : AppCompatActivity() {
         }
         // run game
         game()
+    }
+
+    private fun displayUserName() {
+        val sharedPreference = getSharedPreferences("USER_PREFS", MODE_PRIVATE)
+        val userName = sharedPreference.getString("user_name", "Player")
+        userNameTextView.text = "$userName"
     }
 
     public fun game() {
@@ -101,8 +112,14 @@ class MainMenuActivity : AppCompatActivity() {
             startActivity(Intent(this, MainActivity::class.java))
         }
 
+
+        button_setting.setOnClickListener {
+            startActivity(Intent(this, NameInputDialogActivity::class.java))
+        }
+
         button_exit.setOnClickListener {
             finish()
         }
     }
 }
+
